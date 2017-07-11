@@ -8,10 +8,13 @@ console.log(data);
 
 // 1: Show me how to calculate the average price of all items.
 function question1 () {
-  let total = 0
+  let sum = 0;
   for (var i = 0; i < data.length; i++) {
+    sum += data[i].price;
   }
   // Answer:
+  let avg = sum / data.length
+  console.log('The average price is $' + (sum / data.length).toFixed(2));
 }
 
 
@@ -19,6 +22,14 @@ function question1 () {
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
   // Answer:
+  let array = [];
+  for (let i =0; i < data.length; i++) {
+    if (data[i].prices >= 14.00 && data[i].prices <= 18.00) {
+      array.push(data[i].title);
+    }
+
+  }
+    console.log(array);
 }
 
 
